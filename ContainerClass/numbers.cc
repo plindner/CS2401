@@ -74,3 +74,27 @@ void Numbers::selection_sort(){
         data[smallsp] = tmp;
     }
 }
+
+void Numbers::bubble_sort(){
+    int i, upper_bound = used - 1;
+    double tmp;
+    bool done = false;
+
+    while(!done){
+        done = true; //assume I am done
+
+        // compare adjacent items
+        for(i = 0; i < upper_bound; i++){
+            if(data[i] > data[i + 1]){
+                // out of order, so swap
+                tmp = data[i];
+                data[i] = data[i + 1];
+                data[i + 1] = tmp;
+
+                //not done
+                done = false;
+            }
+        }
+        upper_bound--;
+    }
+}

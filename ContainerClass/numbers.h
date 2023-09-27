@@ -69,13 +69,10 @@ class Numbers{
          */
         void selection_sort();
 
-        /**
-         * @brief sort the array using a bubble sort
-         *        O(n^2)
-         * 
-         */
         void bubble_sort();
 
+        // O(n^2)
+        void insertion_sort();
 
     private:
         double data[SIZE];

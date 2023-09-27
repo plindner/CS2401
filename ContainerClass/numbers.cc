@@ -63,7 +63,7 @@ void Numbers::selection_sort(){
         smallsp = i;
 
         for(j = i + 1; j < used; j++){
-            if(data[j] < data[smallsp]){
+            if(data[j].get_name() < data[smallsp].get_name()){
                 smallsp = j;
             }
         }
@@ -96,5 +96,18 @@ void Numbers::bubble_sort(){
             }
         }
         upper_bound--;
+    }
+}
+
+void Numbers::insertion_sort(){
+    for(int i = 1; i < used; i++){
+        int tmp = data[i];
+
+        int j = i;
+        while(j > 0 && data[j - 1] > tmp){
+            data[j] = data[j - 1];
+            j--;
+        }
+        data[j] = tmp;
     }
 }

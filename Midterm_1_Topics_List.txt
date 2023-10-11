@@ -21,19 +21,22 @@ Midterm 1 Topics List
     * attach() 
     * remove() 
 6. Dynamic Memory
-    * pointers 
+    * Differences in when it is allocated and deallocated compared to automatic and static memory
+    * Pointers 
     * new 
     * delete 
 7. Dynamic Arrays
-    * allocating
-    * deallocating
-    * resizing
-    * using in a container 
+    * Allocating
+    * Deallocating
+    * Resizing
+    * Accessing elements
+    * Using in a container 
         * The Big 3
 8. Linked Lists
     * Node structure
     * How data is organized
     * How nodes are kept in sequence 
+    * How individual nodes are found / accessed
     * Advantages over dynamic arrays
         * Easier to insert, remove
         * Never have to resize

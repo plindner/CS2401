@@ -1,0 +1,19 @@
+template<class T>
+Tcontainer<T>::Tcontainer(){
+    used = 0;
+}
+
+template<class T>
+void Tcontainer<T>::add(T item){
+    if(used < SIZE){
+        data[used] = item;
+        used++;
+    }
+}
+
+template<class T>
+void Tcontainer<T>::display(ostream& outs){
+    for(int i = 0; i < used; i++){
+        outs << data[i] << endl;
+    }
+}

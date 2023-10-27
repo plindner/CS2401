@@ -1,0 +1,29 @@
+template<class T>
+bool node_iterator<T>::operator ==(node_iterator<T> other)const{
+    return current == other.current;
+}
+
+template<class T>
+bool node_iterator<T>::operator !=(node_iterator<T> other)const{
+    return current != other.current;
+}
+
+template<class T>
+T node_iterator<T>::operator *()const{
+    return current -> data();
+}
+
+//prefix
+template<class T>
+node_iterator<T> node_iterator<T>::operator ++()const{
+    current = current -> next();
+    return *this;
+}
+
+//postfix
+template<class T>
+node_iterator<T> node_iterator<T>::operator ++(int)const{
+    node_iterator<T> original(*this);
+    current = current -> next();
+    return original;
+}

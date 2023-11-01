@@ -5,7 +5,8 @@ class TLList{
 
         TLList();
 
-        iterator begin()const;
+        iterator begin()const {return iterator(head);}
+        iterator end()const {return iterator(nullptr);}
 
         // begin, end, r_begin, r_end - all return iterators
         // front_insert, rear_insert, front_remove, rear_remove

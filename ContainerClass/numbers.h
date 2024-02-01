@@ -11,7 +11,13 @@ class Numbers{
         int sum_all() const;
         void show_all() const;
 
-        
+        void remove(int target);
+
+        bool find(int target);
+
+        void selection_sort();
+        void bubble_sort();
+        void insertion_sort();
 
     private:
         int data[SIZE];

@@ -1,0 +1,11 @@
+/* Dynamic Arrays */
+
+// Automatically allocated array of size 10
+int normal_array[10];
+
+// Dynamically allocated array of size 10
+int* dynamic_array;
+dynamic_array = new int[5];
+
+// deallocate the whole array
+delete []dynamic_array;

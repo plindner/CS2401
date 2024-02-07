@@ -1,0 +1,57 @@
+/* Automatic Memory */
+
+int x;
+
+// output the value
+cout << x;
+
+// output the address of x
+cout << &x;
+
+
+
+
+/* pointers */
+
+int *ptr;
+//int* ptr;
+
+// output value the pointer is storing
+cout << ptr;
+
+// output address of the pointer
+cout << &ptr;
+
+// store the address of x in the pointer variable
+ptr = &x;
+
+// output the value at the memory location the pointer is storing
+cout << *ptr;
+
+
+
+/* Dynamic Memory */
+
+// new allocates memory and returns the address
+ptr = new int;
+
+// What do these lines do?
+*ptr = 3;
+cout << *ptr;
+cout << ptr;
+cout << &ptr;
+
+// deallocates the memory new allocated
+delete ptr;
+
+// Increment the value at the location the pointer is storing
+(*ptr)++;
+
+// Increment the value the pointer is storing (changes the address by sizeof(ponter_type))
+ptr++;
+
+
+// You can make a pointer to any valid type
+double *d = new double;
+
+Plant* p = new Plant;

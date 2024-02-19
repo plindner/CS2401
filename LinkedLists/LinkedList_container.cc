@@ -1,3 +1,5 @@
+#include "LinkedList_container.h"
+
 Node::Node(int d, Node* n){
     data_field = d;
     next_field = n;
@@ -9,7 +11,7 @@ LL_Container::~LL_Container(){
 
     while(head != nullptr){
         cursor = head;
-        head = head -> next;
+        head = head -> next();
         delete cursor;
     }
 }
@@ -33,7 +35,7 @@ LL_Container::LL_Container(const LL_Container& other){
     }
 }
 
-LL_Container& operator = (const LL_Container& other){
+LL_Container& LL_Container::operator = (const LL_Container& other){
     // check for self-assignment
 
     // destroy the old list

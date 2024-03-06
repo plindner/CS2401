@@ -111,19 +111,12 @@ void LL_Container::remove(int target){
         if(cursor == tail) tail = prev;
         delete cursor;
     }
-    // case for removing head of long list
-    // only works for linked list with tail.
-    // if you don't have a tail, you don't need this case
-    else if(cursor == head && tail != head){
-        head = cursor -> next();
-        delete cursor;
-    }
     // case for removing last node of a single node list
     // also works to remove the head node of a longer list when you don't have a tail if you remove the line that resets tail
     else if(cursor != nullptr){
         head = prev -> next();
         // only need if you have a tail pointer
-        tail = nullptr;
+        if(head == nullptr) tail = nullptr;
         delete prev;
     }
 }

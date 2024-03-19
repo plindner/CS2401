@@ -1,0 +1,23 @@
+template <class T>
+bool NODE_IT<T>::operator != (NODE_IT<T> other) const{
+    return current != other.current;
+}
+
+template <class T>
+NODE_IT<T> NODE_IT<T>::operator ++ (){
+    current = current -> next();
+    return *this;
+}
+
+template <class T>
+NODE_IT<T> NODE_IT<T>::operator ++ (int){
+    NODE_IT<T> tmp(current);
+    current = current -> next();
+    return tmp;
+}
+
+template <class T>
+T NODE_IT<T>::operator * () const{
+    if(current != nullptr) return current -> data();
+    else return T();
+}

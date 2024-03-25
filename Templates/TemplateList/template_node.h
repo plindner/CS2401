@@ -1,3 +1,6 @@
+#ifndef TMPNODE 
+#define TMPNODE
+
 template <class T>
 class TempNode{
     public:
@@ -25,3 +28,5 @@ TempNode<T>::TempNode(T d, TempNode<T>* p, TempNode<T>* n){
     next_field = n;
     prev_field = p;
 }
+
+#endif

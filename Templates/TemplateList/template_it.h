@@ -1,8 +1,14 @@
+#ifndef TMPIT 
+#define TMPIT
 #include "template_node.h"
+
+template <class T> class TempLL;
 
 template <class T>
 class NODE_IT{
     public:
+        friend class TempLL<T>;
+
         NODE_IT(TempNode<T>* c = nullptr) {current = c;}
 
         // pre-fix
@@ -19,3 +25,5 @@ class NODE_IT{
 };
 
 #include "template_it.template"
+
+#endif
